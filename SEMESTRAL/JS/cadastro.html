@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro e Login com Local Storage</title>
+   
+</head>
+<body>
+    <div class="container">
+        <h2 id="formTitle">Registrar Conta</h2>
+        <form id="authForm">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" required>
+
+            <label for="password">Senha:</label>
+            <input type="password" id="password" required>
+
+            <button type="submit">Registrar</button>
+        </form>
+        <p id="toggleForm">Já tem uma conta? <a href="#" id="toggleLink">Faça login aqui</a></p>
+    </div>
+
+    <script>
+        const formTitle = document.getElementById('formTitle');
+        const toggleForm = document.getElementById('toggleForm');
+        const authForm = document.getElementById('authForm');
+        const toggleLink = document.getElementById('toggleLink');
+        let isLogin = false;
+
+        toggleLink.addEventListener('click', () => {
+            isLogin = !isLogin;
+            formTitle.textContent = isLogin ? 'Login' : 'Registrar Conta';
+            toggleLink.textContent = isLogin ? 'Cadastre-se aqui' : 'Faça login aqui';
+            document.getElementById('name').style.display = isLogin ? 'none' : 'block';
+            authForm.querySelector('button').textContent = isLogin ? 'Entrar' : 'Registrar';
+        });
+
+        authForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            if (isLogin) {
+                // Função de Login
+                const storedUser = JSON.parse(localStorage.getItem(email));
+                if (storedUser && storedUser.password === password) {
+                    alert('Login bem-sucedido!');
+                    // Aqui você pode redirecionar o usuário, por exemplo:
+                    // window.location.href = 'dashboard.html';
+                } else {
+                    alert('E-mail ou senha incorretos.');
+                }
+            } else {
+                // Função de Registro
+                if (localStorage.getItem(email)) {
+                    alert('Este e-mail já está registrado.');
+                } else {
+                    const user = { name, email, password };
+                    localStorage.setItem(email, JSON.stringify(user));
+                    alert('Usuário registrado com sucesso!');
+                    // Alterna para o formulário de login após o registro
+                    isLogin = true;
+                    formTitle.textContent = 'Login';
+                    toggleLink.textContent = 'Cadastre-se aqui';
+                    document.getElementById('name').style.display = 'none';
+                    authForm.querySelector('button').textContent = 'Entrar';
+                }
+            }
+        });
+    </script>
+</body>
+</html>
