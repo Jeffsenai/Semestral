@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz sobre Libras</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section id="container-principal">
+   
+    <div id="iniciar">
+      <button onclick="iniciarQuiz()">Começar</button>
+    </div>
+    <section id="quiz" class="escondido">
+      <div id="pergunta"></div>
+      <div id="opcoes"></div>
+      <button id="proximo" onclick="proximaPergunta()">Próxima</button>
+    </section>
+    <section id="resultado" class="escondido">
+      <h2>Resultado</h2>
+      <p id="resumo"></p>
+      <p id="tempo"></p>
+      <button onclick="reiniciarQuiz()">Jogar Novamente</button>
+    </section>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
