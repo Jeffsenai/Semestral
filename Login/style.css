@@ -102,6 +102,7 @@ body {
     border-radius: 8px;
     width: 100%;
     outline: none;
+    font-family: "Fonte titulo";
 }
 
 .formulario-container {

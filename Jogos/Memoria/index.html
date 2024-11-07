@@ -3,17 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jogo da Memória - Libras</title>
+    <title>Exercício de Memória</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Jogo da Memória - Libras</h1>
-        <div class="temporizador">Tempo: <span id="temporizador">0</span> segundos</div>
-        <div class="tabuleiro-jogo" id="tabuleiroJogo"></div>
-        <button id="botaoReiniciar">Reiniciar Jogo</button>
-        <div class="mensagem" id="mensagem"></div>
-    </div>
-    <script src="script.js"></script>
+  <section class="container-completo secao-padding-100-0 secao-padding-0-100">
+    <div class="secao-jogo spad wow fadeInUp">
+      <div class="container-completo">
+        <div class="linha">
+          <div class="coluna-4">
+            
+            <div class="container-completo texto-centro">
+              <i class="fa-2x fa fa-graduation-cap"></i>
+              <div class="linha-horizontal"></div>
+              <h2>Exercício de memória</h2>
+              <p>Está preparado(a)? Esse jogo é bem fácil, você vai exercitar a sua memória.</p>
+            </div>
+          </div>
+          <br>
+          <!-- Jogo da Memória -->
+          <div class="coluna-8">
+            <section class="jogo-memoria">
+              <div class="carta-memoria" data-estrutura="oi">
+                <!-- 1° carta -->
+                <img class="frente" src="imagens/oi.jpg" alt="oi" />
+                <img class="fundo" src="libras.png" alt="jogar" />
+              </div>
+
+              <div class="carta-memoria" data-estrutura="oi">
+                <img class="frente" src="imagens/oi.jpg" alt="oi" />
+                <img class="fundo" src="imagens/libras.png" alt="jogar" />
+              </div>
+
+              <div class="carta-memoria" data-estrutura="cachorro">
+                <!-- Carta 2 -->
+                <img class="frente" src="imagens/cachorro.jpg" alt="cachorro" />
+                <img class="fundo" src="imagens/libras.png" alt="jogar" />
+              </div>
+              <div class="carta-memoria" data-estrutura="cachorro">
+                <img class="frente" src="imagens/cachorro.jpg" alt="cachorro" />
+                <img class="fundo" src="imagens/libras.png" alt="jogar" />
+              </div>
+
+              <div class="carta-memoria" data-estrutura="tdbem">
+                <!-- Carta 3 -->
+                <img class="frente" src="imagens/tdbem.jpg" alt="tudo bem" />
+                <img class="fundo" src="imagens/libras.png" alt="jogar" />
+              </div>
+              <div class="carta-memoria" data-estrutura="tdbem">
+                <img class="frente" src="imagens/tdbem.jpg" alt="tudo bem" />
+                <img class="fundo" src="imagens/libras.png" alt="jogar" />
+              </div>
+
+              <div class="carta-memoria" data-estrutura="gato">
+                <!-- Carta 4 -->
+                <img class="frente" src="imagens/gato.jpg" alt="gato" />
+                <img class="fundo" src="imagens/libras.png" alt="jogar" />
+              </div>
+              <div class="carta-memoria" data-estrutura="gato">
+                <img class="frente" src="imagens/gato.jpg" alt="gato" />
+                <img class="fundo" src="imagens/libras.png" alt="jogar" />
+              </div>
+
+              <div class="carta-memoria" data-estrutura="gato">
+                <!-- Carta 5 -->
+                <img class="frente" src="gato.jpg" alt="gato" />
+                <img class="fundo" src="libras.png" alt="jogar" />
+              </div>
+              <div class="carta-memoria" data-estrutura="gato">
+                <img class="frente" src="gato.jpg" alt="gato" />
+                <img class="fundo" src="libras.png" alt="jogar" />
+              </div>
+
+              <div class="carta-memoria" data-estrutura="gato">
+                <!-- Carta 6 -->
+                <img class="frente" src="gato.jpg" alt="gato" />
+                <img class="fundo" src="libras.png" alt="jogar" />
+              </div>
+              <div class="carta-memoria" data-estrutura="gato">
+                <img class="frente" src="gato.jpg" alt="gato" />
+                <img class="fundo" src="libras.png" alt="jogar" />
+              </div>
+
+
+            </section>
+          </div>
+        </div>
+      </div>
+  <script src="script.js"></script>
 </body>
 </html>

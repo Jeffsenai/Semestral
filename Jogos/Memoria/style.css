@@ -1,93 +1,84 @@
 * {
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0; 
+  box-sizing: border-box; 
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+  justify-content: center;
+  height: 30px;
+  width: 100%;
+  display: flex;
+  text-align: center;
+  font-family: "Muli", sans-serif;
+  color: black;
 }
 
-.container {
-    text-align: center;
+
+.secao-jogo {
+  width: 100%;
+  height: 100vh;
 }
 
-.tabuleiro-jogo {
-    display: grid;
-    grid-template-columns: repeat(4, 100px);
-    gap: 10px;
-    margin: 20px auto;
+.area-jogo {
+  background: #fff;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  align-items: center;
 }
 
-.carta {
-    width: 100px;
-    height: 100px;
-    border: 2px solid #007BFF;
-    border-radius: 10px;
-    background-color: #fff;
-    cursor: pointer;
-    position: relative;
-    perspective: 1000px;
+.container-completo {
+  background: #F6F6EE;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
 }
 
-.carta.flipped .frente {
-    display: none;
+
+.jogo-memoria {
+  padding-left: 60px;
+  position: relative;
+  display: flex;
+  width: 650px;
+  max-width: 100% !important;
+  height: 100vh;
+  margin: 60px;
+  flex-wrap: wrap;
+  perspective: 1000px;
+}
+.carta-memoria {
+  width: calc(25% - 10px);
+  height: calc(33.333% - 10px);
+  margin: 5px;
+  position: relative;
+  box-shadow: 2px 2px 4px 2px rgb(0 0 0 / 30%);
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
 }
 
-.carta.flipped .verso {
-    display: flex;
+.frente,.fundo {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  border: #333 8px;
+  background: #341f44;
+  backface-visibility: hidden;
 }
 
-.carta .frente,
-.carta .verso {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    backface-visibility: hidden;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.carta-memoria:active {
+  transform: scale(0.97);
+  transition: transform 0.2s;
 }
 
-.carta .frente {
-    background-color: #007BFF;
-    color: white;
-    font-size: 20px;
+.carta-memoria.virada {
+  transform: rotateY(180deg);
 }
 
-.carta .verso {
-    background-color: white;
-    display: none; /* Esconder o verso inicialmente */
-}
-
-.temporizador {
-    font-size: 20px;
-    margin: 10px 0;
-}
-
-.mensagem {
-    margin-top: 20px;
-    font-size: 24px;
-    color: green;
-}
-
-#botaoReiniciar {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-#botaoReiniciar:hover {
-    background-color: #0056b3;
+.frente {
+  transform: rotateY(180deg);
 }
