@@ -13,36 +13,6 @@
     font-family: "Fonte texto";
 }
 
-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-header nav {
-    display: flex;
-    align-items: center;
-}
-
-header nav a {
-    color: white;
-    margin-left: 20px;
-    text-decoration: none;
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-}
-
-header nav .material-icons {
-    margin-right: 5px;
-}
-
-header nav .lupa {
-    cursor: pointer;
-}
   
   body {
     display: flex;
@@ -91,10 +61,10 @@ header nav .lupa {
     margin-top: 20px;
   }
   
-  button:hover {
-    background-color: #F7F4ED;
-    color: #0B1956;
-  }
+  .opcao.selecionado {
+    background-color: #426CC2;
+    color: white;
+}
   
   .escondido {
     display: none;
@@ -165,6 +135,10 @@ header nav .lupa {
     font-size: 1.2rem;
     color: #0B1956;
     margin-top: 10px;
+  }
+  .opcao.selecionado {
+    background-color: #426CC2;
+    color: #0B1956;
   }
   
   @keyframes aparecer {

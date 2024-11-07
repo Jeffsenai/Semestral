@@ -115,5 +115,37 @@ const perguntas = [
     });
   }
 
+  function mostrarPergunta() {
+    const pergunta = perguntas[perguntaAtual];
+    document.getElementById("pergunta").innerText = pergunta.pergunta;
+    const opcoesContainer = document.getElementById("opcoes");
+    opcoesContainer.innerHTML = "";
+
+    pergunta.opcoes.forEach((opcao, index) => {
+        const botao = document.createElement("button");
+        botao.onclick = () => selecionarOpcao(botao, index);
+        botao.classList.add("opcao");
+
+        const imagem = document.createElement("img");
+        imagem.src = pergunta.imagens[index];
+        imagem.alt = `Imagem para opção ${index + 1}`;
+        imagem.classList.add("imagem-opcao");
+
+        const textoOpcao = document.createElement("span");
+        textoOpcao.innerText = opcao;
+
+        botao.appendChild(imagem);
+        botao.appendChild(textoOpcao);
+        opcoesContainer.appendChild(botao);
+    });
+}
+
+function selecionarOpcao(botao, index) {
+    const opcoes = document.querySelectorAll(".opcao");
+    opcoes.forEach(opcao => opcao.classList.remove("selecionado"));
+    botao.classList.add("selecionado");
+    verificarResposta(index);
+}
+
   
   
