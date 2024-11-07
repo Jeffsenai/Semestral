@@ -7,22 +7,22 @@
 
 @font-face {
     font-family: "Fonte texto";
-    src: url(Inter-VariableFont_opsz\,wght.ttf);
+    src: url(Fontes/Inter-VariableFont_opsz\,wght.ttf);
 }
 
 @font-face {
     font-family: "Fonte titulo";
-    src: url(Inter_18pt-Bold.ttf);
+    src: url(Fontes/Inter_18pt-Bold.ttf);
 }
 
 @font-face {
     font-family: "Fonte titulo2";
-    src: url(CreatoDisplay-Black.otf);
+    src: url(Fontes/CreatoDisplay-Black.otf);
 }
 
 @font-face {
     font-family: "Fonte titulo3";
-    src: url(CreatoDisplay-Medium.otf);
+    src: url(Fontes/CreatoDisplay-Medium.otf);
 }
 
 body {
@@ -72,7 +72,7 @@ header nav .lupa {
 }
 
 .icone {
-    margin-right: 70px;
+    margin-right: 40px;
 }
 
 
@@ -115,10 +115,19 @@ header nav .lupa {
 
 .titulo-secao {
     text-align: center;
-    font-size: 24px;
-    font-weight: bold;
-    margin: 40px 0;
-    color: #333333;
+    font-size: 35px;
+    margin-top: 60px;
+    margin-bottom: 10px;
+    font-family: "Fonte titulo";
+    color: black;
+}
+
+.titulo p {
+    text-align: center;
+    font-size: 15px;
+    font-family: "Fonte texto";
+    margin-top: 5px;
+    margin-bottom: 40px;
 }
 
 #materias-destaque {
@@ -194,6 +203,7 @@ header nav .lupa {
     position: relative;
     overflow: hidden;
     border-radius: 10px;
+    margin-bottom: 100px;
 }
 
 .img-box img {
@@ -289,12 +299,6 @@ header nav .lupa {
     font-weight: 550;
 }
 
-
-
-
-
-
-
 /* TERMINA AQUI!!!!!! */
 
 
@@ -305,39 +309,63 @@ header nav .lupa {
     display: flex;
     justify-content: space-between;
     padding: 40px 20px;
-    background-color: #F5F5F5;
     max-width: 1200px;
     margin: 0 auto;
 }
 
 #ativistas img {
-    max-width: 400px;
-    border-radius: 8px;
+    margin-right: 60px;
 }
 
 .info-ativistas h2 {
-    font-size: 24px;
+    font-size: 35px;
     margin-bottom: 20px;
-    color: #333333;
+    font-family: "Fonte titulo2";
+    color: black;
 }
 
 .info-ativistas p {
     font-size: 16px;
     margin-bottom: 20px;
-    color: #666666;
+    color: black;
+    text-align: justify;
+    line-height: 1.5;
+    font-family: "Fonte texto";
 }
 
 .estatisticas {
     display: flex;
-    gap: 30px;
+   
+    background-color: #0B1956;
+    height: 170px;
+    max-width: 850px;
+    align-items: center;
+    justify-content: center;
+     }
+
+     
+     
+
+.estatistica h3{
+    color: #F7F4ED;
+    font-family: "Fonte titulo";
+    font-size: 25px;
+}
+
+.estatistica p{
+    color: #F7F4ED;
+    font-family: "Fonte texto";
+    font-size: 15px;
+    text-align: center;
+    margin-right: 10px;
 }
 
 .estatistica {
-    background-color: #1A2A5E;
-    color: white;
-    padding: 20px;
     text-align: center;
-    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 75%;
 }
 
 #citacoes {
@@ -354,61 +382,184 @@ header nav .lupa {
     background-color: #D8E6F0;
 }
 
-#citacao-rodape {
-    text-align: center;
-    font-style: italic;
-    padding: 20px;
-    font-size: 18px;
-    color: #666666;
-}
 
-footer {
-    background-color: #1A2A5E;
+
+
+
+
+
+
+.principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #426CC2;
     color: white;
-    padding: 30px 20px;
-}
+  }
+  
 
-.footer-container {
+  .ativistas {
     display: flex;
     justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding-bottom: 20px;
-}
-
-footer h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-footer p, footer form input, footer form button {
-    font-size: 14px;
-}
-
-footer form {
-    display: flex;
-    gap: 10px;
-}
-
-footer form input {
-    padding: 8px;
-    border: none;
-    border-radius: 4px;
-}
-
-footer form button {
-    background-color: #f8f8f8;
-    color: #1A2A5E;
-    border: none;
-    padding: 8px 12px;
-    border-radius: 4px;
-    cursor: pointer;
+    align-items: flex-start;
+    padding-top: 90px;
+    padding-bottom: 90px;
+    margin-left: 130px;
+    max-width: 1400px;
+    
+    
+  }
+  
+  .texto-ativistas {
+    max-width: 50%;
+    padding-right: 20px;
+  }
+  
+  .texto-ativistas h1 {
+    font-size: 32px;
     font-weight: bold;
+    font-family: "Fonte titulo2";
+    margin-bottom: 35px;
+    text-align: left;
+  }
+  
+  .texto-ativistas p {
+    font-size: 15px;
+    margin-bottom: 20px;
+    text-align: justify;
+    font-family: "Fonte texto";
+    margin-right: 40px;
+    line-height: 1.5;
+  }
+  
+  .texto-ativistas button {
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 12px;
+    color: white;
+    padding: 10px 40px;
+    cursor: pointer;
+    font-family: "Fonte titulo";
+    font-size: 15px;
+  }
+  
+ 
+  .informacoes {
+    display: flex;
+    gap: 15px;
+  }
+  
+  
+  .item {
+    background-color: white;
+    color: black;
+    text-align: center;
+    width: 200px;
+  }
+  
+  .item img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .item h3 {
+    font-size: 15px;
+    font-family: "Fonte titulo"; 
+    text-align: left;
+    margin-left: 5px;
+    margin-top: 15px;
 }
 
-footer p:last-child {
+  .item p {
+    font-size: 10px;
+    font-family: "Fonte texto";
+    color: #7E7E7E;
+    text-align: left;
+    margin-left: 5px;
+    margin-bottom: 25px;
+  }
+  
+  
+  
+
+
+  .citacao {
+    font-style: italic;
     text-align: center;
-    font-size: 14px;
-    color: #cccccc;
-    margin-top: 20px;
-}
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    font-size: 30px;
+    padding: 40px;
+    color: black;
+    width: 100%;
+    margin-top: 90px;
+    margin-bottom: 90px;
+  }
+
+  .citacao span {
+    color: #696969;
+    font-size: 15px;
+  }
+  
+
+
+
+
+  .rodape {
+    background-color: #0B1956;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .links, .newsletter, .contato {
+    max-width: 200px;
+  }
+  
+  .links a {
+    display: block;
+    color: white;
+    margin: 5px 0;
+    text-decoration: none;
+    font-family: "Fonte texto";
+    
+    
+  }
+  
+  .newsletter p {
+    font-size: 16px;
+  }
+  
+  .newsletter form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .newsletter input[type="email"] {
+    padding: 5px;
+    margin: 10px 0;
+    width: 80%;
+  }
+  
+  .newsletter button {
+    padding: 8px 16px;
+    background-color: white;
+    color: #0d173a;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .contato p {
+    margin: 5px 0;
+  }
+  
+  .faixa {
+    background-color: #081446;
+    height: 50px;
+  }
+  
