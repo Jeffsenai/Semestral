@@ -146,6 +146,3 @@ function selecionarOpcao(botao, index) {
     botao.classList.add("selecionado");
     verificarResposta(index);
 }
-
-  
-  

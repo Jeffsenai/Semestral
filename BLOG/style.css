@@ -15,13 +15,23 @@
     src: url(Inter_18pt-Bold.ttf);
 }
 
+@font-face {
+    font-family: "Fonte titulo2";
+    src: url(CreatoDisplay-Black.otf);
+}
+
+@font-face {
+    font-family: "Fonte titulo3";
+    src: url(CreatoDisplay-Medium.otf);
+}
+
 body {
     background-color: #ffffff;
     color: #333333;
 }
 
 header {
-    background-color: #1A2A5E;
+    background-color: #0B1956;
     color: white;
     padding: 15px 0;
     border-bottom: 1px solid #F6EEE1; 
@@ -46,7 +56,9 @@ header nav a {
     color: white;
     margin-left: 20px;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 15px;
+    margin-right: 35px;
+    font-family: "Fonte texto";
     display: flex;
     align-items: center;
 }
@@ -59,8 +71,14 @@ header nav .lupa {
     cursor: pointer;
 }
 
+.icone {
+    margin-right: 70px;
+}
+
+
+
 #principal {
-    background-color: #1A2A5E;
+    background-color: #0B1956;
     color: white;
     padding: 60px 80px;
     display: flex;
@@ -73,12 +91,14 @@ header nav .lupa {
     font-size: 45px;
     margin-bottom: 20px;
     font-family: "Fonte titulo";
+    color: #F6EEE1;
 }
 
 #principal p {
     font-size: 15px;
     margin-bottom: 80px;
     font-family: "Fonte texto";
+    color: #F6EEE1;
 }
 
 #principal button {
@@ -122,11 +142,164 @@ header nav .lupa {
 .materia .overlay {
     position: absolute;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
     width: 100%;
     padding: 15px;
     border-radius: 0 0 8px 8px;
+    align-items: center;
+    margin-bottom: 35px;
+    text-align: center;
+    font-family: "Fonte titulo";
+    font-size: 20px;
 }
+
+#materias-destaque {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px; 
+    justify-content: space-around; 
+    max-width: 100%;
+    margin: 0 auto; 
+}
+
+.materia {
+    flex: 1 1 300px;
+    max-width: 400px; 
+    position: relative;
+    text-align: center;
+    box-sizing: border-box; 
+}
+
+.titulo1 {
+    opacity: 1;
+    font-size: 30px;
+
+}
+
+/* ANIMAÇÃO!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+#materias-destaque {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.materia {
+    position: relative;
+    width: 500px; 
+    text-align: center;
+}
+
+
+.img-box {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.img-box img {
+    width: 100%;
+    border-radius: 10px;
+    transition: filter 0.5s ease-in-out; 
+}
+
+.img-box:hover img {
+    filter: blur(2px);
+}
+
+.img-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0); 
+    transition: background 0.5s ease-in-out;
+    z-index: 1;
+    border-radius: 10px;
+}
+
+.img-box:hover::before {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+
+.legenda {
+    opacity: 0;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    transition: opacity 0.5s ease-in-out, transform 0.8s ease-in-out;
+    transform: translateY(20px);
+    z-index: 2; 
+    text-align: center;
+}
+
+.img-box:hover .legenda {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.legenda button {
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    border-radius: 12px;
+    font-family: "Fonte titulo2";
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.img-box:hover .overlay{
+    opacity: 0;
+}
+
+.img-box:hover .titulo1 {
+    font-size: 30px;
+    font-family: "Fonte titulo3";
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.img-box:hover p{
+    font-size: 18px;
+    font-family: "Fonte texto";
+    text-align: justify;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.img-box:hover button{
+    font-family: "Fonte texto";
+    font-size: 18px;
+    text-align: justify;
+    margin-bottom: 30px;
+    height: 40px; ;
+    width: 150px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-weight: 550;
+}
+
+
+
+
+
+
+
+/* TERMINA AQUI!!!!!! */
+
+
+
+
 
 #ativistas {
     display: flex;
