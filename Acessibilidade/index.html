@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Acessibilidade</title>
+    <style>
+        body {
+            font-size: 16px;
+            color: #333;
+            background-color: #fff;
+        }
+        .high-contrast {
+            background-color: #000;
+            color: #fff;
+        }
+        #accessibility-bar {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Barra de Acessibilidade -->
+    <div id="accessibility-bar">
+        <button onclick="increaseFontSize()">A+</button>
+        <button onclick="decreaseFontSize()">A-</button>
+        <button onclick="toggleHighContrast()">Alto Contraste</button>
+    </div>
+
+    <h1>Bem-vindo ao nosso site</h1>
+    <p>Este é um exemplo de implementação de acessibilidade em HTML e JavaScript.</p>
+
+    <script>
+        // Função para aumentar o tamanho da fonte
+        function increaseFontSize() {
+            let currentSize = parseFloat(getComputedStyle(document.body).fontSize);
+            document.body.style.fontSize = (currentSize + 1) + 'px';
+        }
+
+        // Função para diminuir o tamanho da fonte
+        function decreaseFontSize() {
+            let currentSize = parseFloat(getComputedStyle(document.body).fontSize);
+            document.body.style.fontSize = (currentSize - 1) + 'px';
+        }
+
+        // Função para alternar o modo de alto contraste
+        function toggleHighContrast() {
+            document.body.classList.toggle('high-contrast');
+        }
+    </script>
+</body>
+</html>

@@ -308,9 +308,10 @@ header nav .lupa {
 #ativistas {
     display: flex;
     justify-content: space-between;
-    padding: 40px 20px;
+    
     max-width: 1200px;
     margin: 0 auto;
+    margin-bottom: 120px;
 }
 
 #ativistas img {
@@ -335,7 +336,6 @@ header nav .lupa {
 
 .estatisticas {
     display: flex;
-   
     background-color: #0B1956;
     height: 170px;
     max-width: 850px;
@@ -343,8 +343,6 @@ header nav .lupa {
     justify-content: center;
      }
 
-     
-     
 
 .estatistica h3{
     color: #F7F4ED;
@@ -368,12 +366,7 @@ header nav .lupa {
     max-width: 75%;
 }
 
-#citacoes {
-    background-color: #1A2A5E;
-    color: white;
-    text-align: center;
-    padding: 40px 20px;
-}
+
 
 #artigos-relacionados {
     display: flex;
@@ -406,8 +399,6 @@ header nav .lupa {
     padding-bottom: 90px;
     margin-left: 130px;
     max-width: 1400px;
-    
-    
   }
   
   .texto-ativistas {
@@ -506,34 +497,52 @@ header nav .lupa {
 
 
 
-  .rodape {
+  footer {
     background-color: #0B1956;
     color: white;
+    text-align: center;
+    padding: 50px 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .conteudo-footer {
     display: flex;
     justify-content: space-around;
-    padding: 50px;
-    width: 100%;
+    align-items: flex-start;
+  }
+  
+  .secao-footer {
+    flex: 1;
+    padding: 0 20px;
+    text-align: left;
+  }
+  
+  .links ul {
+    list-style: none;
+    margin-left: 150px;
+    line-height: 2.0;
+  }
+  
+  .links li {
+    margin: 10px 0;
+  }
+  
+  .newsletter h3,
+  .contato h3 {
+    font-size: 30px;
+    margin-bottom: 10px;
     text-align: center;
   }
   
-  .links, .newsletter, .contato {
-    max-width: 200px;
-  }
-  
-  .links a {
-    display: block;
-    color: white;
+  .newsletter p,
+  .contato p {
     margin: 5px 0;
-    text-decoration: none;
-    font-family: "Fonte texto";
-    
-    
+    text-align: center;
+    margin-bottom: 15px;
   }
   
-  .newsletter p {
-    font-size: 16px;
-  }
   
+
   .newsletter form {
     display: flex;
     flex-direction: column;
@@ -541,25 +550,61 @@ header nav .lupa {
   }
   
   .newsletter input[type="email"] {
-    padding: 5px;
-    margin: 10px 0;
-    width: 80%;
+    padding: 10px 15px;
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    width: 100%;
+    max-width: 320px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-family: "Fonte texto";
+    text-align: left;
+  }
+
+  input::placeholder {
+    color: white;
   }
   
   .newsletter button {
-    padding: 8px 16px;
-    background-color: white;
-    color: #0d173a;
-    border: none;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 15px;
+    width: 140px;
     cursor: pointer;
+    background: transparent;
+    border: 1px solid white;
+    font-family: "Fonte titulo";
+  }
+
+
+  .secao-footer-contato{
+    color: white;
+    text-align: left;
+    line-height: 2.5;
+    margin-right: 80px;
+    margin-left: 50px;
+   }
+
+
+  .contato p img {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 10px;
   }
   
-  .contato p {
-    margin: 5px 0;
+  .divisoria {
+    width: 1px;
+    background: url('Line\ 6.png') no-repeat center center;
+    background-size: cover;
+    height: 200px;
+    margin-right: 30px;
   }
   
-  .faixa {
+  .barra-escura-footer {
     background-color: #081446;
-    height: 50px;
+    height: 60px;
+    width: 100%;
   }
   
