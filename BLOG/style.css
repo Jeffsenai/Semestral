@@ -33,7 +33,7 @@ body {
 header {
     background-color: #0B1956;
     color: white;
-    padding: 15px 0;
+    padding: 35px 0;
     border-bottom: 1px solid #F6EEE1; 
     font-family: "Fonte texto";
 }
@@ -67,13 +67,33 @@ header nav a {
     align-items: center;
 }
 
-header nav .material-icons {
-    margin-right: 5px;
+
+
+/* LINHA ABAIXO DO A */
+#navegacao{
+  position: relative; 
 }
 
-header nav .lupa {
-    cursor: pointer;
+
+#navegacao::after {
+  content: "";
+  width: 0%;
+  height: 3px;
+  background-color: #FF6F00;
+  position: absolute;
+  bottom: -4px; 
+  left: 0;
+  transition: width 0.4s ease-in-out;
 }
+
+
+#navegacao:hover::after {
+  width: 100%;
+}
+
+/* até aq */
+
+
 
 .icone {
     margin-right: 40px;
@@ -96,6 +116,7 @@ header nav .lupa {
     margin-bottom: 20px;
     font-family: "Fonte titulo";
     color: #F6EEE1;
+    margin-top: 50px;
 }
 
 #principal p {
@@ -110,14 +131,32 @@ header nav .lupa {
 #principal button {
     background-color: #ffffff;
     color: #0B1956;
-    padding: 10px 20px;
+    padding: 8px 30px;
+    width: 150px;
     border: none;
     cursor: pointer;
     font-weight: bold;
-    border-radius: 15px;
-    font-size: 18px;
+    border-radius: 18px;
+    font-size: 17px;
+    margin-top: 30px;
 }
 
+/* EFEITOS DE HOVER */
+
+#principal p:hover{
+  color: #FF6F00;
+  transition: color 0.5s ease;
+}
+
+#principal button:hover{
+  background:transparent;
+  color: white;
+  border: 1px solid white;
+  transition: background 0.45s ease;
+}
+
+
+/* FIM!!! */
 
 .imagem {
   overflow: hidden;
@@ -330,10 +369,9 @@ header nav .lupa {
 #ativistas {
     display: flex;
     justify-content: space-between;
-    
     max-width: 1200px;
     margin: 0 auto;
-    margin-bottom: 10px;
+    margin-bottom: 220px;
 }
 
 #ativistas img {
@@ -387,7 +425,23 @@ header nav .lupa {
   font-size: 16px;
   color: white;
   text-align: center;
+  font-family: "Fonte texto";
+  line-height: normal;
 }
+
+/* EFEITOS DE HOVER */
+
+.estatistica-item h2:hover {
+  color: #FF6F00;
+  transition: color 0.5s ease;
+}
+
+.estatistica-item p:hover {
+  color: #FF6F00;
+  transition: color 0.5s ease;
+}
+
+/* FIM!!!!! */
 
 
 
@@ -399,12 +453,6 @@ header nav .lupa {
     padding: 40px 20px;
     background-color: #D8E6F0;
 }
-
-
-
-
-
-
 
 
 .principal {
@@ -432,11 +480,12 @@ header nav .lupa {
   }
   
   .texto-ativistas h1 {
-    font-size: 32px;
+    font-size: 45px;
     font-weight: bold;
     font-family: "Fonte titulo2";
     margin-bottom: 35px;
     text-align: left;
+    color: #F6EEE1;
   }
   
   .texto-ativistas p {
@@ -451,13 +500,24 @@ header nav .lupa {
   .texto-ativistas button {
     background: transparent;
     border: 1px solid white;
-    border-radius: 12px;
+    border-radius: 7px;
     color: white;
-    padding: 10px 40px;
+    padding: 7px 30px;
+    width: 160px;
     cursor: pointer;
     font-family: "Fonte titulo";
     font-size: 15px;
   }
+
+  /* EFEITOS DE HOVER */
+
+  .texto-ativistas button:hover {
+  background-color: #FF6F00;
+  transition: background 0.5s ease;
+  border: transparent;
+}
+
+/* FIM!!!! */
   
  
   .informacoes {
@@ -528,6 +588,7 @@ header nav .lupa {
     text-align: center;
     padding-top: 50px;
     font-family: Arial, sans-serif;
+    padding-bottom: 50px;
   }
   
   .conteudo-footer {
@@ -548,9 +609,24 @@ header nav .lupa {
     line-height: 2.0;
   }
   
+  .links a {
+    text-decoration: none;
+    color: white;
+    font-family: "Fonte texto";
+  }
+  
   .links li {
     margin: 10px 0;
   }
+
+  /* EFEITOS DE HOVER */
+
+  .links a:hover {
+    color:#FF6F00;
+  transition: color 0.5s ease;
+}
+
+/* FIM!!!! */
   
   .newsletter h3,
   .contato h3 {
@@ -602,15 +678,26 @@ header nav .lupa {
   }
   
   .newsletter button {
-    padding: 10px 20px;
+    padding: 7px 20px;
     color: white;
     border-radius: 15px;
-    width: 140px;
+    width: 120px;
     cursor: pointer;
     background: transparent;
     border: 1px solid white;
     font-family: "Fonte titulo";
   }
+
+  /* EFEITOS DE HOVER */
+
+  .newsletter button:hover {
+    background-color: white;
+    color:#0B1956;
+  transition: color 0.5s ease;
+  transition: background 0.5s ease;
+}
+
+/* FIM!!!! */
 
 
   .secao-footer-contato{
@@ -621,19 +708,30 @@ header nav .lupa {
     margin-left: 50px;
    }
 
+   .secao-footer-contato h4 {
+    font-family: "Fonte titulo2";
+    margin-left: 20px;
+  }
 
-  .contato p img {
+   .secao-footer-contato p img {
     width: 20px;
     height: 20px;
     vertical-align: middle;
     margin-right: 10px;
   }
+
+  .secao-footer-contato p {
+    font-family: "Fonte texto";
+    margin-left: 20px;
+  }
+
   
   .divisoria {
     width: 1px;
     background: url('Line\ 6.png') no-repeat center center;
     background-size: cover;
-    height: 200px;
+    height: 230px;
+    margin-top: 10px;
     margin-left: 120px;
   }
 
@@ -641,7 +739,8 @@ header nav .lupa {
     width: 1px;
     background: url('Line\ 6.png') no-repeat center center;
     background-size: cover;
-    height: 200px;
+    height: 230px;
+    margin-top: 10px;
     margin-left: 0px;
   }
   
