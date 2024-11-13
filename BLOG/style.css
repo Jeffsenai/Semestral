@@ -25,6 +25,11 @@
     src: url(Fontes/CreatoDisplay-Medium.otf);
 }
 
+@font-face {
+  font-family: "Fonte";
+  src: url(Fontes/Barcelony.ttf);
+}
+
 body {
     background-color: #ffffff;
     color: #333333;
@@ -462,6 +467,15 @@ header nav a {
     background-color: #426CC2;
     color: white;
   }
+
+  /* EFEITOS DE HOVER */
+
+  .principal h1:hover {
+    color: #FF6F00;
+    transition: color 0.5s ease-in-out;
+  }
+  
+  /* FIM!!!! */
   
 
   .ativistas {
@@ -559,8 +573,8 @@ header nav a {
   
 
 
-  .citacao {
-    font-style: italic;
+  .citacao p{
+    font-family: "Fonte titulo2";
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -749,4 +763,7 @@ header nav a {
     height: 60px;
     width: 100%;
   }
+  
+
+
   
