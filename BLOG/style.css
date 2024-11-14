@@ -58,7 +58,7 @@ header nav {
 }
 
 .inicio{
-  margin-left: 580px;
+  margin-left: 625px;
 }
 
 header nav a {
@@ -101,7 +101,8 @@ header nav a {
 
 
 .icone {
-    margin-right: 40px;
+   
+    margin-left: 65px;
 }
 
 
@@ -574,7 +575,8 @@ header nav a {
 
 
   .citacao p{
-    font-family: "Fonte titulo2";
+    font-family: "Fonte texto";
+    font-weight: italic;
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -763,7 +765,4 @@ header nav a {
     height: 60px;
     width: 100%;
   }
-  
-
-
   

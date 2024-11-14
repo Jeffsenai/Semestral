@@ -3,25 +3,37 @@ const bancoDeDados = {
         imagem: "https://files.passeidireto.com/d505993c-a4c4-409b-acea-54105fa7f805/d505993c-a4c4-409b-acea-54105fa7f805.jpeg",
         video: "https://youtu.be/3iUZju5h5gw?si=narSOCz9ui2zlAYV",
     },
-    "gato": {
-        imagem: "https://exemplo.com/imagens/gato.jpg",
-        video: "https://exemplo.com/videos/gato.mp4"
+    "tudo bem": {
+        imagem: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPitQ3EW5HqOUtT71UAbIe4cNnEXrNrv9zsw&s",
+        video: "https://exemplo.com/videos/gato.mp4",
+    },
+    "obrigado": {
+        imagem: "",
+        video: "",
+    },
+    "carro": {
+        imagem: "",
+        video: "",
+    },
+    "carro": {
+        imagem: "",
+        video: "",
     },
     "carro": {
         imagem: "https://exemplo.com/imagens/carro.jpg",
-        video: "https://exemplo.com/videos/carro.mp4",
+        video: "",
     }
-    // Adicione mais palavras aqui
+    
 };
 
-// Selecionando elementos do HTML
+
 let inputTxt = document.querySelector('#container__inputtxt');
 let btnTxt = document.querySelector('#container__btn');
 let resultado = document.querySelector('#container__result');
 
-// Função de busca
+// BUSCA 
 btnTxt.addEventListener('click', () => {
-    let palavra = inputTxt.value.toLowerCase();  // Converte a entrada para minúsculas
+    let palavra = inputTxt.value.toLowerCase();  
     if (palavra === '') {
         resultado.innerHTML = `<p id="container__significado">Escreva a palavra que deseja aprender em Libras!</p>`;
     } else if (bancoDeDados[palavra]) {
@@ -34,7 +46,7 @@ btnTxt.addEventListener('click', () => {
         `;
     } else {
         
-        // Se a palavra não foi encontrada
+        // MENSAGEM DE ERRO
         resultado.innerHTML = `<p id="container__significado"><span>Esta palavra</span> ainda não se encontra em nosso banco de dados.</p>`;
     }
 });
