@@ -1,25 +1,25 @@
 const bancoDeDados = {
     "oi": {
         imagem: "https://files.passeidireto.com/d505993c-a4c4-409b-acea-54105fa7f805/d505993c-a4c4-409b-acea-54105fa7f805.jpeg",
-        video: "https://youtu.be/3iUZju5h5gw?si=narSOCz9ui2zlAYV",
+        video: "oi.mp4",
     },
     "tudo bem": {
         imagem: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPitQ3EW5HqOUtT71UAbIe4cNnEXrNrv9zsw&s",
         video: "https://exemplo.com/videos/gato.mp4",
     },
-    "obrigado": {
+    "por favor": {
         imagem: "",
         video: "",
     },
-    "carro": {
+    "sim": {
         imagem: "",
         video: "",
     },
-    "carro": {
+    "não": {
         imagem: "",
         video: "",
     },
-    "carro": {
+    "bom dia": {
         imagem: "https://exemplo.com/imagens/carro.jpg",
         video: "",
     }
