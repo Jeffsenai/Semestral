@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Vídeo com Imagens e Ícones</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        .video-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            width: 80%;
+        }
+
+        .video-container img,
+        .video-container i {
+            cursor: pointer;
+        }
+
+        .video-container video {
+            max-width: 50%;
+            max-height: 100%;
+            object-fit: cover;
+        }
+
+        .left-images,
+        .right-images {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 20%;
+        }
+
+        .left-images img,
+        .right-images img {
+            width: 50px;
+            height: 50px;
+            margin: 0 10px;
+        }
+
+        .left-icons,
+        .right-icons {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 30px;
+            color: #333;
+            cursor: pointer;
+        }
+
+        .left-icons {
+            left: -40px;
+        }
+
+        .right-icons {
+            right: -40px;
+        }
+    </style>
+</head>
+<body>
+
+<section>
+    <div class="video-container">
+        <!-- Ícones à esquerda e à direita do vídeo -->
+        <i class="left-icons" id="left-icon">&#8592;</i>
+
+
+        <!-- Imagens nas pontas -->
+        <div class="left-images">
+            <img src="Imagens/logo.png" alt="Imagem 1" id="image1">
+        </div>
+
+        
+
+        <!-- Vídeo Centralizado -->
+        <video id="video" controls>
+            <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
+            Seu navegador não suporta o elemento de vídeo.
+        </video>
+
+        <i class="right-icons" id="right-icon">&#8594;</i>
+
+        <!-- Imagens nas pontas -->
+        <div class="right-images">
+            <img src="Imagens/game 1.png" alt="Imagem 2" id="image2">
+        </div>
+    </div>
+</section>
+
+<script>
+    // Variáveis para acessar os elementos HTML
+    const leftIcon = document.getElementById('left-icon');
+    const rightIcon = document.getElementById('right-icon');
+    const video = document.getElementById('video');
+    const image1 = document.getElementById('image1');
+    const image2 = document.getElementById('image2');
+    
+
+    // Dados de exemplo para vídeo e imagens
+    const videoData = [
+        {
+            videoSrc: "https://www.w3schools.com/html/movie.mp4",
+            img1Src: "https://via.placeholder.com/100?text=Imagem+1a",
+            img2Src: "https://via.placeholder.com/100?text=Imagem+2a"
+        },
+        {
+            videoSrc: "https://www.w3schools.com/html/movie2.mp4",
+            img1Src: "Imagens/logo.png",
+            img2Src: "https://via.placeholder.com/100?text=Imagem+2b"
+        }
+    ];
+
+    let currentIndex = 0; // Índice inicial (primeiro conjunto de mídia)
+
+    // Função para atualizar vídeo e imagens
+    function updateMedia() {
+        const currentData = videoData[currentIndex];
+        
+        // Atualiza o vídeo
+        video.src = currentData.videoSrc;
+        video.load(); // Carrega o novo vídeo
+
+        // Atualiza as imagens
+        image1.src = currentData.img1Src;
+        image2.src = currentData.img2Src;
+    }
+
+    // Função para alternar entre os conjuntos de mídia
+    function changeMedia(direction) {
+        currentIndex = (currentIndex + direction + videoData.length) % videoData.length;
+        updateMedia();
+    }
+
+    // Event listeners para os ícones
+    leftIcon.addEventListener('click', () => changeMedia(-1));
+    rightIcon.addEventListener('click', () => changeMedia(1));
+
+    // Inicializa com a primeira mídia
+    updateMedia();
+</script>
+
+</body>
+</html>

@@ -25,10 +25,6 @@
     src: url(Fontes/CreatoDisplay-Medium.otf);
 }
 
-@font-face {
-  font-family: "Fonte";
-  src: url(Fontes/Barcelony.ttf);
-}
 
 body {
     background-color: #ffffff;
