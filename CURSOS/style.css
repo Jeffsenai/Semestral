@@ -151,18 +151,33 @@ header nav a {
 }
 
 .secao-pdf p {
-    font-size: 16px;
-    margin-bottom: 20px;
+    font-size: 14px;
+    margin-bottom: 50px;
+    font-family: "Fonte texto";
 }
 
 .botao {
     background-color: #fff;
     color: #002e6d;
     padding: 10px 20px;
-    border-radius: 5px;
+    border: 1px solid #fff;
+    border-radius: 25px;
     text-decoration: none;
     font-weight: bold;
+    
 }
+
+/* EFEITOS DE HOVER */
+
+.botao:hover {
+    border: 1px solid white;
+    background-color: #0B1956;
+    color: white;
+  transition: color 0.5s ease;
+  transition: background 0.5s ease;
+}
+
+/* FIM!!!! */
 
 
 
@@ -237,6 +252,19 @@ header nav a {
     font-weight: bold;
     font-family: "Fonte titulo";
 }
+
+
+
+/* EFEITOS DE HOVER */
+
+.livro button:hover {
+    background-color: white;
+    color:#0B1956;
+  transition: color 0.5s ease;
+  transition: background 0.5s ease;
+}
+
+/* FIM!!!! */
 
 
 
