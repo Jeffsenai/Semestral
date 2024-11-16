@@ -1,0 +1,260 @@
+/* inicio da div quem somos */
+
+.quemSomos{
+    margin-top: 50px;
+    height: 648px;
+    background-image: url(img/equipe.png);
+    align-items: center;
+    /* justify-content: center; */
+    display: flex;
+    padding-left: 80px;
+}
+
+.textoQ{
+    width: 500px;
+    /* padding-top: 250px; */
+}
+
+h2{
+    font-size: 50px;
+    font-family: Fonte titulo;
+    color: white;
+    width: 500px;
+    margin-bottom: 25px;
+}
+
+.somos{
+    font-family: light;
+    color: white;
+    font-size: 18px;
+}
+
+.more{
+    margin-top: 25px;
+    background-color: rgba(255, 192, 203, 0);
+    border: 1px solid white;
+    width: 90px;
+    height: 30px;
+    border-radius: 5px;
+    font-family: Fonte titulo3;
+    color: white;
+    cursor: pointer;
+}
+
+/* parte dos textos nos numeros fim  */
+
+/* comeco das caixas de numero */
+
+.numeros{
+    background-color: #0B1956;
+    width: 320px;
+    height: 420px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px 5px 5px 5px;
+}
+
+.numero{
+background-color: #00000000;
+border: 1px solid white;
+width: 290px;
+height: 400px;
+display: flex;
+flex-direction: column;
+border-radius: 100px 5px 5px 5px;
+/* justify-content: center; */
+/* align-items: center; */
+}
+
+.numbertext{
+    display: flex;
+    margin-top: 20px;
+}
+h1{
+    font-size:130px;
+    color: white;
+    opacity: 32%;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.number{
+    width: 200px;
+    color: white;
+    margin-top: 30px;
+    margin-left: 10px;
+}
+
+.num{
+    color: white;
+    font-family: light;
+    font-size:15px;
+    margin-top: 40px;
+    margin-left: 20px;
+}
+
+span{
+    font-size: 40px;
+    font-family: Fonte titulo;
+    color: white;
+    width: 500px;
+}
+
+/* caixa dois */
+
+.numeros1{
+    background-color: #F6F1E7;
+    width: 320px;
+    height: 420px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px 5px 5px 5px;
+    margin-left: 50px;
+    border: 1.5px solid #0B1956;
+}
+
+.numero1{
+background-color: #00000000;
+width: 320px;
+height: 420px;
+display: flex;
+flex-direction: column;
+border-radius: 100px 5px 5px 5px;
+/* justify-content: center; */
+/* align-items: center; */
+}
+
+.numbertext1{
+    display: flex;
+    margin-top: 20px;
+}
+.um{
+    font-size:130px;
+    color: #0B1956;
+    margin-left: 40px;
+    margin-top: 20px;
+    opacity: 100%;
+}
+
+.number1{
+    width: 200px;
+    color: white;
+    margin-top: 30px;
+    margin-left: 10px;
+}
+
+.num1{
+    color: #426CC2;
+    font-family: light;
+    font-size:15px;
+    margin-top: 40px;
+    margin-left: 40px;
+    font-weight: 300;
+}
+
+.dois{
+    font-size: 40px;
+    font-family: Fonte titulo;
+    color: #426CC2;
+    width: 500px;
+    position: relative;
+    top: 60px;
+    margin-left: 5px;
+}
+
+.next{
+    margin-top: 25px;
+    background-color: rgba(255, 192, 203, 0);
+    border: 1px solid white;
+    width: 150px;
+    height: 30px;
+    border-radius: 5px;
+    font-family: Fonte titulo3;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    position: relative;
+    top: 230px;
+    right: 15px;
+    cursor: pointer;
+}
+
+/* fim da caixa dos numeros */
+
+
+
+
+
+
+
+
+/* JEFF */
+
+.numeros2 {
+    background-color: #E5F5F1;
+    width: 320px;
+    height: 420px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px 5px 5px 5px;
+    margin-left: 50px;
+    border: 1.5px solid #0B1956;
+    opacity: 0; /* Inicialmente invisível */
+    transition: opacity 0.5s;
+}
+
+.numero2 {
+    background-color: #00000000;
+    width: 290px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 100px 5px 5px 5px;
+}
+
+.numbertext2 {
+    display: flex;
+    margin-top: 20px;
+}
+
+.dois {
+    color: #0B1956;
+    margin-left: 40px;
+    margin-top: 20px;
+    opacity: 100%;
+}
+
+.number2 {
+    width: 200px;
+    color: #0B1956;
+    margin-top: 30px;
+    margin-left: 10px;
+}
+
+.num2 {
+    color: #426CC2;
+    font-family: light;
+    font-size: 15px;
+    margin-top: 40px;
+    margin-left: 20px;
+    font-weight: 300;
+}
+
+.tres {
+    font-size: 40px;
+    font-family: Fonte titulo;
+    color: #426CC2;
+    width: 500px;
+    position: relative;
+    top: 60px;
+    margin-left: 5px;
+}
+
+
+
+
+
