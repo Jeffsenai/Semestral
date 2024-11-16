@@ -128,9 +128,10 @@ header nav a {
 }
 
 .imagem-principal {
-    width: 45%;
-    
+    width: 45%; 
 }
+
+
 
 
 
@@ -141,7 +142,7 @@ header nav a {
     text-align: center;
     background-color: #0B1956;
     color: white;
-    padding: 130px 20px;
+    padding: 100px 20px;
     margin: 40px 0;
 }
 
@@ -186,85 +187,123 @@ header nav a {
 
 
 .secao-ebooks {
-    text-align: center;
-    margin-bottom: 100px;
+  text-align: center;
+  margin-bottom: 100px;
 }
 
 .secao-ebooks p {
-    font-family: "Fonte texto";
-    margin-bottom: 20px;
-    color: #000000;
+  font-family: "Fonte texto";
+  margin-bottom: 20px;
+  color: #000000;
 }
 
 .secao-ebooks h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
+  font-size: 32px;
+  margin-bottom: 20px;
 }
 
 .livros {
-    display: flex;
-    gap: 80px;
-    justify-content: center;
-    justify-items: center;
+  display: flex;
+  gap: 80px;
+  justify-content: center;
+  justify-items: center;
 }
 
 
 .DIVpdf {
-    margin-top: 150px;
+  margin-top: 150px;
 }
 
 .pdf{
-    width: 100%;
-    border-radius: 5px;
+  width: 100%;
+  border-radius: 5px;
 }
 
 .seta {
-    width: 10px;
+  width: 10px;
 }
 
 .livro {
-    width: 250px;
-    text-align: center;
+  width: 250px;
+  text-align: center;
+  transition: opacity 0.6s ease-in-out;
 }
 
 .livro p {
-    font-family: "Fonte titulo";
-    margin-top: 10px;
+  font-family: "Fonte titulo";
+  margin-top: 10px;
 }
 
 .livro a {
-    text-decoration: none;
-    font-family: "Fonte titulo";
+  text-decoration: none;
+  font-family: "Fonte titulo";
 }
 .livro button {
-    display: block;
-    background-color: #0B1956;
-    color: white;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 7px;
-    padding-bottom: 7px;
-    border-radius: 25px;
-    margin-top: 10px;
-    margin-left: 50px;
-    width: 150px;
-    text-align: center;
-    font-weight: bold;
-    font-family: "Fonte titulo";
+  display: block;
+  background-color: #0B1956;
+  color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  border-radius: 25px;
+  margin-top: 10px;
+  margin-left: 50px;
+  width: 150px;
+  text-align: center;
+  font-weight: bold;
+  font-family: "Fonte titulo";
 }
 
+
+
+
+
+.capa img{
+  transition: transform 0.3s ease; 
+}
+
+.capa:hover img{
+    transform: scale(1.1); 
+    border-radius: 20px;
+}
 
 
 /* EFEITOS DE HOVER */
 
 .livro button:hover {
-    background-color: white;
-    color:#0B1956;
-  transition: color 0.5s ease;
-  transition: background 0.5s ease;
+  background-color: white;
+  color:#0B1956;
+transition: color 0.5s ease;
+transition: background 0.5s ease;
 }
 
 /* FIM!!!! */
+
+
+
+.carrossel {
+  display: flex;
+  gap: 70px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.6s ease-in-out;
+}
+
+.livro img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+
+.DIVpdf img {
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.DIVpdf img:hover {
+  transform: scale(1.2);
+}
 
 
 
@@ -277,27 +316,70 @@ header nav a {
 
 
 .secao-videos {
-    background-color: #426CC2;
-    padding: 100px 20px;
-    color: white;
-    margin-bottom: 40px;
+  background-color: #4A69BD;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  color: #fff;
 }
+
 .secao-videos h2 {
-    text-align: center;
-    font-size: 32px;
-    margin-bottom: 20px;
+  font-size: 32px;
+  margin-bottom: 20px;
 }
+
 .videos {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+.DIVseta {
+  display: flex;
+  align-items: center;
+}
+
+.seta-esquerda, .seta-direita {
+  width: 30px;
+  cursor: pointer;
+}
+
+.conteudo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.imagemEsquerda img, .imagemDireita img {
+  width: 100%;
+  height: auto;
+  opacity: 0.;
+  border-radius: 15px;
+}
+
 .video {
-    width: 200px;
-    background-color: #444;
-    height: 120px;
-    border-radius: 10px;
+  width: 500px;
+  text-align: center;
 }
+
+.video video {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.video h1 {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-top: 10px;
+}
+
+.video p {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-top: 5px;
+}
+
 
 
 
