@@ -1,6 +1,6 @@
 const carrossel = document.querySelector('.carrossel');
-    const btnEsquerda = document.querySelector('.seta-esquerda');
-    const btnDireita = document.querySelector('.seta-direita');
+    const btnEsquerda = document.querySelector('.esquerda');
+    const btnDireita = document.querySelector('.direita');
 
     // Declarar todas os livros e os coiso que precisa ter
     const livros = [
@@ -60,3 +60,15 @@ const carrossel = document.querySelector('.carrossel');
         currentSet = (currentSet - 1 + livros.length) % livros.length; 
         atualizarCarrossel();
     });
+
+
+
+
+
+
+
+
+
+
+
+    
