@@ -5,8 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const btnEsquerda = document.querySelector('.seta-esquerda');
     const btnDireita = document.querySelector('.seta-direita');
 
- 
-
     const videos = [
         {
             src: 'https://www.w3schools.com/html/mov_bbb.mp4',
@@ -14,7 +12,6 @@ document.addEventListener("DOMContentLoaded", () => {
             description: 'Tempo de duração: 10 minutos',
             imgEsquerda: 'Imagens/imagemEsquerda.png',
             imgDireita: 'Imagens/imagemDireita.png'
-            
         },
         {
             src: 'https://www.w3schools.com/html/mov_bbb.mp4',
@@ -29,23 +26,23 @@ document.addEventListener("DOMContentLoaded", () => {
             description: 'Tempo de duração: 20 minutos',
             imgEsquerda: 'Imagens/imagemEsquerda3.png',
             imgDireita: 'Imagens/imagemDireita3.png'
-
         }
     ];
 
     let currentVideo = 0;
 
-    
     function atualizarCarrossel() {
-        console.log("Atualizando carrossel para o vídeo:", currentVideo);
-
-        const videoElement = videoContainer.querySelector('video');
-        const titleElement = videoContainer.querySelector('h1');
-        const descriptionElement = videoContainer.querySelector('p');
-
         videoContainer.style.opacity = 0;
+        imagemEsquerda.style.opacity = 0;
+        imagemDireita.style.opacity = 0;
 
+        // Animação de 3s
         setTimeout(() => {
+            const videoElement = videoContainer.querySelector('video');
+            const titleElement = videoContainer.querySelector('h1');
+            const descriptionElement = videoContainer.querySelector('p');
+
+            
             videoElement.src = videos[currentVideo].src;
             titleElement.textContent = videos[currentVideo].title;
             descriptionElement.textContent = videos[currentVideo].description;
@@ -53,19 +50,18 @@ document.addEventListener("DOMContentLoaded", () => {
             imagemDireita.src = videos[currentVideo].imgDireita;
 
             videoContainer.style.opacity = 1;
+            imagemEsquerda.style.opacity = 1;
+            imagemDireita.style.opacity = 1;
         }, 300);
     }
 
-   
+    // setinha
     btnDireita.addEventListener('click', () => {
-        console.log("Botão direita clicado");
         currentVideo = (currentVideo + 1) % videos.length; 
         atualizarCarrossel();
     });
 
     btnEsquerda.addEventListener('click', () => {
-        console.log("Botão esquerda clicado");
-       
         currentVideo = (currentVideo - 1 + videos.length) % videos.length;
         atualizarCarrossel();
     });

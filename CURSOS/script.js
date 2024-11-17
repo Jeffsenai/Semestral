@@ -12,12 +12,12 @@ const carrossel = document.querySelector('.carrossel');
         [
             { img: 'Ebooks/CAPAebook4.png', title: 'Apostila sobre Libras do Instituto Federal', link: 'Ebooks/ApostilaLibrasIFSC.pdf'},
             { img: 'Ebooks/CAPAebook5.png', title: 'Aprenda a se comunicar com pessoas surdas', link: 'https://drive.google.com/file/d/1Z3YSevOIy8CrMagsXS4-0B3PMv3VM2sf/view?ref=blog.inboarding.co'},
-            { img: 'Ebooks/CAPAebook6.png', title: 'Livro 6', link: ''}
+            { img: 'Ebooks/CAPAebook6.png', title: 'Introdução à Libras: língua, história e cultura', link: 'https://riut.utfpr.edu.br/jspui/bitstream/1/1598/2/libras.pdf'}
         ],
         [
-            { img: 'Ebooks/CAPAebook7.png', title: 'Livro 7', link: ''},
-            { img: 'Ebooks/CAPAebook8.png', title: 'Livro 8', link: ''},
-            { img: 'Ebooks/CAPAebook9.png', title: 'Livro 9', link: ''}
+            { img: 'Ebooks/CAPAebook7.png', title: 'Curso gratuito sobre Libras em E-book', link: 'Ebooks/Apostila em LIBRAS - Curso Básico ENAP 2019.pdf'},
+            { img: 'Ebooks/CAPAebook8.png', title: 'Aperfeiçoamento profissional em <br> Libras', link: 'https://educarepedagogia.com.br/wp-content/uploads/2020/11/Libras-basico.pdf'},
+            { img: 'Ebooks/CAPAebook9.png', title: 'A Cultura Surda e sua relação com a Libras', link: 'http://projetoredes.org/wp/wp-content/uploads/Cultura-Surda-e-Libras.pdf'}
         ]
     ];
 

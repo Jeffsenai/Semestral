@@ -1,0 +1,375 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+@font-face {
+    font-family: "Fonte texto";
+    src: url(Fontes/Inter-VariableFont_opsz\,wght.ttf);
+}
+
+@font-face {
+    font-family: "Fonte titulo";
+    src: url(Fontes/Inter_18pt-Bold.ttf);
+}
+
+@font-face {
+    font-family: "Fonte titulo2";
+    src: url(Fontes/CreatoDisplay-Black.otf);
+}
+
+@font-face {
+    font-family: "Fonte titulo3";
+    src: url(Fontes/CreatoDisplay-Medium.otf);
+}
+
+
+body {
+    background-color: #F6F6EE;
+}
+
+header {
+    padding: 35px 0;
+    border-bottom: 1px solid #000000; 
+    font-family: "Fonte texto";
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+}
+
+.inicio{
+  margin-left: 625px;
+}
+
+header nav a {
+    color: black;
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 15px;
+    margin-right: 35px;
+    font-family: "Fonte texto";
+    display: flex;
+    align-items: center;
+}
+
+
+
+/* LINHA ABAIXO DO A */
+#navegacao{
+  position: relative; 
+}
+
+
+#navegacao::after {
+  content: "";
+  width: 0%;
+  height: 3px;
+  background-color: #FF6F00;
+  position: absolute;
+  bottom: -4px; 
+  left: 0;
+  transition: width 0.4s ease-in-out;
+}
+
+
+#navegacao:hover::after {
+  width: 100%;
+}
+
+/* até aq */
+
+
+
+.icone {
+    margin-left: 65px;
+}
+
+
+
+
+.banner{
+    margin-bottom: 35px;
+}
+
+.banner img{
+    width: 100%;
+    height: auto;
+}
+
+
+
+
+
+.secao-ebooks {
+    text-align: center;
+    margin-bottom: 100px;
+  }
+  
+  .secao-ebooks p {
+    font-family: "Fonte texto";
+    margin-bottom: 20px;
+    color: #000000;
+  }
+  
+  .secao-ebooks h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  
+  .livros {
+    display: flex;
+    gap: 80px;
+    justify-content: center;
+    justify-items: center;
+  }
+  
+  
+  
+  .livro {
+    width: 250px;
+    text-align: center;
+    transition: opacity 0.6s ease-in-out;
+    margin-bottom: 60px;
+  }
+  
+  .livro p {
+    font-family: "Fonte titulo";
+    margin-top: 10px;
+  }
+  
+  .livro a {
+    text-decoration: none;
+    font-family: "Fonte titulo";
+  }
+  .livro button {
+    display: block;
+    background-color: #0B1956;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    border-radius: 25px;
+    margin-top: 10px;
+    margin-left: 50px;
+    width: 150px;
+    text-align: center;
+    font-weight: bold;
+    font-family: "Fonte titulo";
+  }
+  
+  
+  
+  
+  
+  .capa img{
+    transition: transform 0.3s ease; 
+  }
+  
+  .capa:hover img{
+      transform: scale(1.1); 
+      border-radius: 20px;
+  }
+  
+  
+  /* EFEITOS DE HOVER */
+  
+  .livro button:hover {
+    background-color: white;
+    color:#0B1956;
+  transition: color 0.5s ease;
+  transition: background 0.5s ease;
+  }
+  
+  /* FIM!!!! */
+  
+  .livro img {
+    width: 100%;
+    border-radius: 20px;
+  }
+
+
+
+
+
+
+  footer {
+    background-color: #0B1956;
+    color: white;
+    text-align: center;
+    padding-top: 50px;
+    font-family: Arial, sans-serif;
+    padding-bottom: 50px;
+  }
+  
+  .conteudo-footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+  
+  .secao-footer {
+    flex: 1;
+    
+    text-align: left;
+  }
+  
+  .links ul {
+    list-style: none;
+    margin-left: 100px;
+    line-height: 2.0;
+  }
+  
+  .links a {
+    text-decoration: none;
+    color: white;
+    font-family: "Fonte texto";
+  }
+  
+  .links li {
+    margin: 10px 0;
+  }
+
+  /* EFEITOS DE HOVER */
+
+  .links a:hover {
+    color:#FF6F00;
+  transition: color 0.5s ease;
+}
+
+/* FIM!!!! */
+  
+  .newsletter h3,
+  .contato h3 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .newsletter p,
+  .contato p {
+    margin: 5px 0px;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+
+ 
+  
+  .contato {
+    padding-right: 80px;
+  }
+
+  .newsletter {
+    padding-left: 80px;
+  }
+  
+
+  .newsletter form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .newsletter input[type="email"] {
+    padding: 10px 15px;
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    width: 100%;
+    max-width: 320px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-family: "Fonte texto";
+    text-align: left;
+  }
+
+  input::placeholder {
+    color: white;
+  }
+  
+  .newsletter button {
+    padding: 7px 20px;
+    color: white;
+    border-radius: 15px;
+    width: 120px;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid white;
+    font-family: "Fonte titulo";
+  }
+
+  /* EFEITOS DE HOVER */
+
+  .newsletter button:hover {
+    background-color: white;
+    color:#0B1956;
+  transition: color 0.5s ease;
+  transition: background 0.5s ease;
+}
+
+/* FIM!!!! */
+
+
+  .secao-footer-contato{
+    color: white;
+    text-align: left;
+    line-height: 2.5;
+    margin-right: 80px;
+    margin-left: 50px;
+   }
+
+   .secao-footer-contato h4 {
+    font-family: "Fonte titulo2";
+    margin-left: 20px;
+  }
+
+   .secao-footer-contato p img {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 10px;
+  }
+
+  .secao-footer-contato p {
+    font-family: "Fonte texto";
+    margin-left: 20px;
+  }
+
+  
+  .divisoria {
+    width: 1px;
+    background: url('Line\ 6.png') no-repeat center center;
+    background-size: cover;
+    height: 230px;
+    margin-top: 10px;
+    margin-left: 120px;
+  }
+
+  .divisoria1 {
+    width: 1px;
+    background: url('Line\ 6.png') no-repeat center center;
+    background-size: cover;
+    height: 230px;
+    margin-top: 10px;
+    margin-left: 0px;
+  }
+  
+  .barra-escura-footer {
+    background-color: #081446;
+    height: 60px;
+    width: 100%;
+  }

@@ -93,6 +93,10 @@ header nav a {
 
 
 
+
+
+
+
 .icone {
     margin-left: 65px;
 }
@@ -326,6 +330,7 @@ transition: background 0.5s ease;
 .secao-videos h2 {
   font-size: 32px;
   margin-bottom: 20px;
+  font-family: "Fonte titulo2";
 }
 
 .videos {
@@ -367,16 +372,21 @@ transition: background 0.5s ease;
 }
 
 .video h1 {
-  font-size: 1.2rem;
+  font-size: 19px;
   color: #fff;
   margin-top: 10px;
 }
 
 .video p {
-  font-size: 0.9rem;
+  font-size: 15px;
   color: #ccc;
   margin-top: 5px;
 }
+
+.video, .imagemEsquerda img, .imagemDireita img {
+  transition: opacity 0.5s ease;
+}
+
 
 
 
@@ -402,7 +412,7 @@ transition: background 0.5s ease;
 
 
 .texto-jogos h2 {
-    font-size: 35px;
+    font-size: 40px;
     line-height: 1.3;
     margin-bottom: 10px;
     font-family: "Fonte titulo3";
@@ -413,7 +423,7 @@ transition: background 0.5s ease;
 .texto-jogos a {
     color: #555555;
     font-family: "Fonte texto";
-    font-size: 12px;
+    font-size: 15px;
 
 }
 
@@ -738,3 +748,4 @@ footer {
     height: 60px;
     width: 100%;
   }
+ 
