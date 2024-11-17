@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
         {
             src: 'https://www.w3schools.com/html/mov_bbb.mp4',
             title: 'Introdução à Libras',
-            description: 'Uma introdução básica ao uso da Libras no cotidiano. Tempo de duração: 10 minutos',
+            description: 'Tempo de duração: 10 minutos',
             imgEsquerda: 'Imagens/imagemEsquerda.png',
             imgDireita: 'Imagens/imagemDireita.png'
             
@@ -19,14 +19,14 @@ document.addEventListener("DOMContentLoaded", () => {
         {
             src: 'https://www.w3schools.com/html/mov_bbb.mp4',
             title: 'Aula Intermediária',
-            description: 'Aula intermediária para melhorar a fluência na Libras. Tempo de duração: 15 minutos',
+            description: 'Tempo de duração: 15 minutos',
             imgEsquerda: 'Imagens/imagemEsquerda2.png',
             imgDireita: 'Imagens/imagemDireita2.png'
         },
         {
             src: 'https://www.w3schools.com/html/mov_bbb.mp4',
             title: 'Aula Avançada',
-            description: 'Aula avançada para domínio completo da Libras. Tempo de duração: 20 minutos',
+            description: 'Tempo de duração: 20 minutos',
             imgEsquerda: 'Imagens/imagemEsquerda3.png',
             imgDireita: 'Imagens/imagemDireita3.png'
 
