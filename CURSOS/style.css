@@ -150,6 +150,13 @@ header nav a {
     margin: 40px 0;
 }
 
+/* .secao-pdf:hover{
+  background-image: url(Imagens/foto.jpg);
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  background-position: center; 
+} */
+
 .secao-pdf h2 {
     font-size: 32px;
     margin-bottom: 20px;
