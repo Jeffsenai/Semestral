@@ -23,9 +23,6 @@ const carrossel = document.querySelector('.carrossel');
 
     let currentSet = 0;
 
-
-
-
     // Muda os livros que aparece
     function atualizarCarrossel() {
         const livroDivs = carrossel.querySelectorAll('.livro');
