@@ -16,7 +16,7 @@ const carrossel = document.querySelector('.carrossel');
         ],
         [
             { img: 'Ebooks/CAPAebook7.png', title: 'Curso gratuito sobre Libras em E-book', link: 'Ebooks/Apostila em LIBRAS - Curso Básico ENAP 2019.pdf'},
-            { img: 'Ebooks/CAPAebook8.png', title: 'Aperfeiçoamento profissional em <br> Libras', link: 'https://educarepedagogia.com.br/wp-content/uploads/2020/11/Libras-basico.pdf'},
+            { img: 'Ebooks/CAPAebook8.png', title: 'Aperfeiçoamento profissional em Libras', link: 'https://educarepedagogia.com.br/wp-content/uploads/2020/11/Libras-basico.pdf'},
             { img: 'Ebooks/CAPAebook9.png', title: 'A Cultura Surda e sua relação com a Libras', link: 'http://projetoredes.org/wp/wp-content/uploads/Cultura-Surda-e-Libras.pdf'}
         ]
     ];
