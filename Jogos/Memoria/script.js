@@ -1,22 +1,27 @@
+let inicioTempo = new Date(); // marca o tempo
 const cartas = document.querySelectorAll(".carta-memoria");
 
+let cartaVirada = false;
+let travarTabuleiro = false;
+let primeiraCarta, segundaCarta;
+let paresEncontrados = 0;
+let totalPares = cartas.length / 2; 
 
-let cartaVirada = false; 
-let travarTabuleiro = false; // trava o jogo
-let primeiraCarta, segundaCarta; 
 
-//Quando clica
+
+
+// when click:
 function virarCarta() {
-  if (travarTabuleiro) return; 
-  if (this === primeiraCarta) return; // Impede que a mesma carta seja virada duas vezes seguidas
+  if (travarTabuleiro) return;
+  if (this === primeiraCarta) return; 
 
-  this.classList.add("virada"); // coloca "virada" quando acerta
+  this.classList.add("virada");
 
-  // primeira carta 
+  // primeira carta
   if (!cartaVirada) {
-    cartaVirada = true; 
-    primeiraCarta = this; 
-    return; 
+    cartaVirada = true;
+    primeiraCarta = this;
+    return;
   }
 
   // marca a segunda carta
@@ -24,51 +29,84 @@ function virarCarta() {
   verificarPar();
 }
 
-//verifica se são um par
+// é um par?
 function verificarPar() {
-  // if = carta1 = carta2:
   let ehPar = primeiraCarta.dataset.estrutura === segundaCarta.dataset.estrutura;
 
-  // Se for par, desabilita as cartas, senão, vira dnv
   ehPar ? desabilitarCartas() : desvirarCartas();
 }
 
-
 function desabilitarCartas() {
-  // trava o click se acertar
   primeiraCarta.removeEventListener("click", virarCarta);
   segundaCarta.removeEventListener("click", virarCarta);
 
+  paresEncontrados++; 
+
+  // se todos os pares foram encontrados
+  if (paresEncontrados === totalPares) {
+    setTimeout(finalizarJogo, 500); // Aguarda um tempo antes de finalizar, para dar um efeito visual
+  }
 
   resetarTabuleiro();
 }
 
-// desvira a carta se nn acertar
 function desvirarCartas() {
-  travarTabuleiro = true; 
-
+  travarTabuleiro = true;
 
   setTimeout(() => {
-    primeiraCarta.classList.remove("virada"); // tira a classe "virada" 
-    segundaCarta.classList.remove("virada"); // tira a classe "virada" 
+    primeiraCarta.classList.remove("virada");
+    segundaCarta.classList.remove("virada");
 
-    resetarTabuleiro(); // Reseta o tabuleiro
+    resetarTabuleiro();
   }, 1500);
 }
 
-
 function resetarTabuleiro() {
-  [cartaVirada, travarTabuleiro] = [false, false]; 
-  [primeiraCarta, segundaCarta] = [null, null]; 
+  [cartaVirada, travarTabuleiro] = [false, false];
+  [primeiraCarta, segundaCarta] = [null, null];
 }
 
-// embaralha pra que nn fique no msm lugar
+// embaralha as cartas
 (function embaralhar() {
   cartas.forEach((carta) => {
-    let posicaoAleatoria = Math.floor(Math.random() * 12);
+    let posicaoAleatoria = Math.floor(Math.random() * cartas.length);
     carta.style.order = posicaoAleatoria;
   });
 })();
 
-// quando clica vira a carta
+// when clique, virar a carta
 cartas.forEach((carta) => carta.addEventListener("click", virarCarta));
+
+
+
+// quando acaba
+function finalizarJogo() {
+  const tempoFinal = new Date();
+  const tempoGasto = ((tempoFinal - inicioTempo) / 1000).toFixed(2);
+
+  // mostra o resultadi
+  document.getElementById("cartas").classList.add("escondido");
+  document.getElementById("resultado").classList.remove("escondido");
+
+  // reseta td
+  document.getElementById("resumo").innerText = `Você acertou todos os pares!`;
+  document.getElementById("tempo").innerText = `Tempo gasto: ${tempoGasto} segundos.`;
+}
+
+
+// reinicia
+function reiniciarJogo() {
+  inicioTempo = new Date(); 
+  paresEncontrados = 0; 
+
+  cartas.forEach((carta) => {
+    carta.classList.remove("virada");
+    carta.addEventListener("click", virarCarta); 
+  });
+
+  document.getElementById("resultado").classList.add("escondido");
+  document.getElementById("cartas").classList.remove("escondido");
+
+  embaralhar(); 
+  resetarTabuleiro(); 
+}

@@ -1,12 +1,28 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercício de Memória</title>
+    <title>JOGO DA MEMÓRIA</title>
     <link rel="stylesheet" href="style.css">
+   
 </head>
 <body>
+    <header>
+        <div class="container">
+            <img class="logo" src="Logo/logo.png" alt="">
+            <nav>
+                <a class="inicio" id="navegacao" href="#">Início</a>
+                <a id="navegacao" href="../CURSOS/index.html">Cursos</a>
+                <a id="navegacao" href="#">Jogos</a>
+                <a id="navegacao" href="http://localhost:3000/adicionar">Login</a>
+                
+               <a href=""><img class="icone" src="Icones/menu.png" alt="Menu"></a>
+            </nav>
+        </div>
+    </header>
+
+
   <section class="container-completo secao-padding-100-0 secao-padding-0-100">
     <div class="secao-jogo spad wow fadeInUp">
       <div class="container-completo">
@@ -14,81 +30,143 @@
           <div class="coluna-4">
             
             <div class="container-completo texto-centro">
-              <i class="fa-2x fa fa-graduation-cap"></i>
-              <div class="linha-horizontal"></div>
-              <h2>Exercício de memória</h2>
-              <p>Está preparado(a)? Esse jogo é bem fácil, você vai exercitar a sua memória.</p>
+              <h2>Jogo da memóroia memória</h2>
+              <p>Você consegue associar todos os gestos da Libras de forma correta?</p>
             </div>
           </div>
-          <br>
           <div class="coluna-8">
+            <div id="cartas">
             <section class="jogo-memoria">
               <div class="carta-memoria" data-estrutura="oi">
                 <!-- carta1 -->
-                <img class="frente" src="imagens/oi.jpg" alt="oi" />
-                <img class="fundo" src="libras.png" alt="jogar" />
+                <img class="frente" src="imagens/Oi.png" alt="Oi" />
+                <img class="fundo" src="imagens/libras.png" alt="jogar" />
               </div>
 
               <div class="carta-memoria" data-estrutura="oi">
-                <img class="frente" src="imagens/oi.jpg" alt="oi" />
+                <img class="frente" src="imagens/Oi.png" alt="Oi" />
                 <img class="fundo" src="imagens/libras.png" alt="jogar" />
               </div>
 
               <div class="carta-memoria" data-estrutura="cachorro">
                 <!-- Carta 2 -->
-                <img class="frente" src="imagens/cachorro.jpg" alt="cachorro" />
+                <img class="frente" src="imagens/Cachorro.png" alt="Cachorro" />
                 <img class="fundo" src="imagens/libras.png" alt="jogar" />
               </div>
               <div class="carta-memoria" data-estrutura="cachorro">
-                <img class="frente" src="imagens/cachorro.jpg" alt="cachorro" />
+                <img class="frente" src="imagens/Cachorro.png" alt="Cachorro" />
                 <img class="fundo" src="imagens/libras.png" alt="jogar" />
               </div>
 
-              <div class="carta-memoria" data-estrutura="tdbem">
+              <div class="carta-memoria" data-estrutura="voce">
                 <!-- Carta 3 -->
-                <img class="frente" src="imagens/tdbem.jpg" alt="tudo bem" />
+                <img class="frente" src="imagens/Voce.png" alt="Você" />
                 <img class="fundo" src="imagens/libras.png" alt="jogar" />
               </div>
-              <div class="carta-memoria" data-estrutura="tdbem">
-                <img class="frente" src="imagens/tdbem.jpg" alt="tudo bem" />
+              <div class="carta-memoria" data-estrutura="voce">
+                <img class="frente" src="imagens/Voce.png" alt="Você" />
                 <img class="fundo" src="imagens/libras.png" alt="jogar" />
               </div>
 
               <div class="carta-memoria" data-estrutura="gato">
                 <!-- Carta 4 -->
-                <img class="frente" src="imagens/gato.jpg" alt="gato" />
+                <img class="frente" src="imagens/Gato.png" alt="gato" />
                 <img class="fundo" src="imagens/libras.png" alt="jogar" />
               </div>
               <div class="carta-memoria" data-estrutura="gato">
-                <img class="frente" src="imagens/gato.jpg" alt="gato" />
+                <img class="frente" src="imagens/Gato.png" alt="gato" />
                 <img class="fundo" src="imagens/libras.png" alt="jogar" />
               </div>
 
-              <div class="carta-memoria" data-estrutura="gato">
+              <div class="carta-memoria" data-estrutura="ajuda">
                 <!-- Carta 5 -->
-                <img class="frente" src="gato.jpg" alt="gato" />
-                <img class="fundo" src="libras.png" alt="jogar" />
+                <img class="frente" src="imagens/Ajuda.png" alt="Ajuda" />
+                <img class="fundo" src="imagens/libras.png" alt="jogar" />
               </div>
-              <div class="carta-memoria" data-estrutura="gato">
-                <img class="frente" src="gato.jpg" alt="gato" />
-                <img class="fundo" src="libras.png" alt="jogar" />
+              <div class="carta-memoria" data-estrutura="ajuda">
+                <img class="frente" src="imagens/Ajuda.png" alt="Ajuda" />
+                <img class="fundo" src="imagens/libras.png" alt="jogar" />
               </div>
 
-              <div class="carta-memoria" data-estrutura="gato">
+              <div class="carta-memoria" data-estrutura="dormir">
                 <!-- Carta 6 -->
-                <img class="frente" src="gato.jpg" alt="gato" />
-                <img class="fundo" src="libras.png" alt="jogar" />
+                <img class="frente" src="imagens/Dormir.png" alt="Dormir" />
+                <img class="fundo" src="imagens/libras.png" alt="jogar" />
               </div>
-              <div class="carta-memoria" data-estrutura="gato">
-                <img class="frente" src="gato.jpg" alt="gato" />
-                <img class="fundo" src="libras.png" alt="jogar" />
+              <div class="carta-memoria" data-estrutura="dormir">
+                <img class="frente" src="imagens/Dormir.png" alt="Dormir" />
+                <img class="fundo" src="imagens/libras.png" alt="jogar" />
               </div>
 
 
             </section>
           </div>
+          </div>
         </div>
       </div>
+      </div>
+    </div>
+  
+    <div id="resultado" class="escondido">
+      <h2 id="resumo">Parabéns!</h2>
+      <p id="tempo"></p>
+      <button onclick="reiniciarJogo()">Reiniciar</button>
+    </div>
+
+  <!-- EXTENSÃO DE LIBRAS -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+    </div>
+</div>
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
+  new window.VLibras.Widget('https://vlibras.gov.br/app');
+</script>
+  
+
+
+
+
+  <footer>
+    <div class="conteudo-footer">
+      <div class="secao-footer links">
+        <ul>
+          <a class = "aFooter" href=""><li>Sobre nós</li></a>
+          <a class = "aFooter" href=""><li>Cursos</li></a>
+          <a class = "aFooter" href="../BLOG/index.html"><li>Blog</li></a>
+          <a class = "aFooter" href=""><li>Chat</li></a>
+          <a class = "aFooter" href=""><li>Dicionário</li></a>
+          <a class = "aFooter" href=""><li>Jogos</li></a>
+        </ul>
+      </div>
+  
+      <div class="divisoria1"></div>
+  
+      <div class="secao-footer newsletter">
+        <h3>Newsletter</h3>
+        <p>Inscreva-se em nosso newsletter e receba todas as <br>novidades</p>
+        <form>
+          <input type="email" placeholder="Email">
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+  
+      <div class="divisoria"></div>
+  
+      <div class="secao-footer-contato">
+        <h4>Contate-nos</h4>
+        <p><img src="Icones/telefone.png" alt="Ícone Telefone">(11) 93211 - 7232</p>
+        <p><img src="Icones/email.png" alt="Ícone Email"> librali@gmail.com</p>
+        <p><img src="Icones/local.png" alt="Ícone Localização"> Ferraz de Vasconcelos - SP</p>
+        <p><img src="Icones/instagram.png" alt="Ícone Instagram"> @librali</p>
+      </div>
+    </div>
+
+  </footer>
+  <div class="barra-escura-footer"></div>
+  
   <script src="script.js"></script>
 </body>
 </html>
