@@ -2,7 +2,7 @@ const perguntas = [
   { pergunta: "Qual é o sinal para a palavra 'Amor'?", opcoes: ["A", "B", "C", "D"], imagens: ["imagens/amor/amor.jpg", "imagens/amor/amor2.png", "imagens/amor/amor3.png", "imagens/amor/amor4.png"], resposta: 0 },
   { pergunta: "Qual sinal representa a letra 'A'?", opcoes: ["A", "B", "C", "D"], imagens: ["imagens/a/a1.png", "imagens/a/a2.png", "imagens/a/a3.png", "imagens/a/a4.png"], resposta: 1 },
   { pergunta: "Qual é o sinal para a palavra 'Família'?", opcoes: ["A", "B", "C", "D"], imagens: ["imagens/familia/familia1.png", "imagens/familia/familia2.png", "imagens/familia/familia3.png", "imagens/familia/familia4.png"], resposta: 2 },
-  { pergunta: "Qual é o sinal para a palavra 'Mãe'?", opcoes: ["A", "B", "C", "D"], imagens: ["imagens/cachorro.jpeg", "imagens/mae2.png", "imagens/mae3.png", "imagens/mae4.png"], resposta: 3 },
+  { pergunta: "Qual é o sinal para a palavra 'Mãe'?", opcoes: ["A", "B", "C", "D"], imagens: ["imagens/mae/mae1.png", "imagens/mae/mae2.png", "imagens/mae/mae3.png", "imagens/mae/mae4.png"], resposta: 3 },
   { pergunta: "Qual sinal representa a letra 'B'?", opcoes: ["A", "B", "C", "D"], imagens: ["imagens/b/b1.png", "imagens/b/b2.png", "imagens/b/b3.png", "imagens/b/b4.png"], resposta: 0 },
   { pergunta: "Qual é o sinal para a palavra 'Obrigado'?", opcoes: ["A", "B", "C", "D"], imagens: ["imagens/obrigado1.png", "imagens/obrigado2.png", "imagens/obrigado3.png", "imagens/obrigado4.png"], resposta: 1 },
   { pergunta: "Qual é o sinal para a palavra 'Casa'?", opcoes: ["A", "B", "C", "D"], imagens: ["imagens/casa1.png", "imagens/casa2.png", "imagens/casa3.png", "imagens/casa4.png"], resposta: 2 },
