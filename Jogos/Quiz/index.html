@@ -1,17 +1,33 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de Matérias</title>
+    <title>JOGO DA MEMÓRIA</title>
     <link rel="stylesheet" href="style.css">
+   
 </head>
 <body>
+    <header>
+        <div class="container">
+            <img class="logo" src="Logo/logo.png" alt="">
+            <nav>
+                <a class="inicio" id="navegacao" href="#">Início</a>
+                <a id="navegacao" href="../CURSOS/index.html">Cursos</a>
+                <a id="navegacao" href="#">Jogos</a>
+                <a id="navegacao" href="http://localhost:3000/adicionar">Login</a>
+                
+               <a href=""><img class="icone" src="Icones/menu.png" alt="Menu"></a>
+            </nav>
+        </div>
+    </header>
     
   <section id="container-principal">
    
     <div id="iniciar">
-      <button onclick="iniciarQuiz()">Começar</button>
+      <h1>Quiz sobre Libras</h1>
+      <p>Você consegue acertar 10 perguntas referentes à Lingua Brasileira de Sinais?</p>
+      <button onclick="iniciarQuiz()">Iniciar o Quiz</button>
     </div>
     <section id="quiz" class="escondido">
       <div id="pergunta"></div>
@@ -26,6 +42,63 @@
     </section>
   </section>
 
-  <script src="script.js"></script>
+
+
+<!-- EXTENSÃO DE LIBRAS -->
+<div vw class="enabled">
+  <div vw-access-button class="active"></div>
+  <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+  </div>
+</div>
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
+new window.VLibras.Widget('https://vlibras.gov.br/app');
+</script>
+
+
+
+
+
+<footer>
+  <div class="conteudo-footer">
+    <div class="secao-footer links">
+      <ul>
+        <a class = "aFooter" href=""><li>Sobre nós</li></a>
+        <a class = "aFooter" href=""><li>Cursos</li></a>
+        <a class = "aFooter" href="../BLOG/index.html"><li>Blog</li></a>
+        <a class = "aFooter" href=""><li>Chat</li></a>
+        <a class = "aFooter" href=""><li>Dicionário</li></a>
+        <a class = "aFooter" href=""><li>Jogos</li></a>
+      </ul>
+    </div>
+
+    <div class="divisoria1"></div>
+
+    <div class="secao-footer newsletter">
+      <h3>Newsletter</h3>
+      <p>Inscreva-se em nosso newsletter e receba todas as <br>novidades</p>
+      <form>
+        <input type="email" placeholder="Email">
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+
+    <div class="divisoria"></div>
+
+    <div class="secao-footer-contato">
+      <h4>Contate-nos</h4>
+      <p><img src="Icones/telefone.png" alt="Ícone Telefone">(11) 93211 - 7232</p>
+      <p><img src="Icones/email.png" alt="Ícone Email"> librali@gmail.com</p>
+      <p><img src="Icones/local.png" alt="Ícone Localização"> Ferraz de Vasconcelos - SP</p>
+      <p><img src="Icones/instagram.png" alt="Ícone Instagram"> @librali</p>
+    </div>
+  </div>
+
+</footer>
+<div class="barra-escura-footer"></div>
+
+<script src="script.js"></script>
 </body>
 </html>
+

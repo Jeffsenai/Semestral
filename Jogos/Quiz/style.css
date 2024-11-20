@@ -1,27 +1,106 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  header {
-    background-color: #1A2A5E;
-    color: white;
-    padding: 15px 0;
-    border-bottom: 1px solid #F6EEE1; 
-    font-family: "Fonte texto";
+@font-face {
+  font-family: "Fonte texto";
+  src: url(Fontes/Inter-VariableFont_opsz\,wght.ttf);
+}
+
+@font-face {
+  font-family: "Fonte titulo";
+  src: url(Fontes/Inter_18pt-Bold.ttf);
+}
+
+@font-face {
+  font-family: "Fonte titulo2";
+  src: url(Fontes/CreatoDisplay-Black.otf);
+}
+
+@font-face {
+  font-family: "Fonte titulo3";
+  src: url(Fontes/CreatoDisplay-Medium.otf);
+}
+
+
+body {
+  background-color: #F6F6EE;
+}
+
+header {
+  padding: 35px 0;
+  border-bottom: 1px solid #000000; 
+  font-family: "Fonte texto";
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+}
+
+.inicio{
+margin-left: 625px;
+}
+
+header nav a {
+  color: black;
+  margin-left: 20px;
+  text-decoration: none;
+  font-size: 15px;
+  margin-right: 35px;
+  font-family: "Fonte texto";
+  display: flex;
+  align-items: center;
+}
+
+
+
+/* LINHA ABAIXO DO A */
+#navegacao{
+position: relative; 
+}
+
+
+#navegacao::after {
+content: "";
+width: 0%;
+height: 3px;
+background-color: #FF6F00;
+position: absolute;
+bottom: -4px; 
+left: 0;
+transition: width 0.4s ease-in-out;
+}
+
+
+#navegacao:hover::after {
+width: 100%;
+}
+
+/* até aq */
+
+
+
+
+
+
+
+.icone {
+  margin-left: 65px;
 }
 
   
-  body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background-color: #F6F6EE;
-    color: #0B1956;
-  }
   
   #container-principal {
     width: 90%;
@@ -31,7 +110,18 @@
     background-color: #F7F4ED;
     border-radius: 15px;
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-    margin: 20px;
+    margin-left: 230px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+
+  }
+
+  #iniciar h1 {
+    font-family: "Fonte titulo";
+  }
+
+  #iniciar p{
+    font-family: "Fonte texto";
   }
   
   h1 {
@@ -45,6 +135,7 @@
     margin-bottom: 30px;
     color: #0B1956;
     line-height: 1.5;
+    font-family: "Fonte titulo";
   }
   
   button {
@@ -102,7 +193,7 @@
     cursor: pointer;
     transition: background-color 0.3s;
     animation: aparecer 0.5s ease;
-    height: 150px; /* Aumenta a altura das opções */
+    height: 150px; 
   }
   
   .opcao:hover {
@@ -145,3 +236,173 @@
     to { opacity: 1; transform: translateY(0); }
   }
   
+
+
+  footer {
+    background-color: #0B1956;
+    color: white;
+    text-align: center;
+    padding-top: 50px;
+    font-family: Arial, sans-serif;
+    padding-bottom: 50px;
+    width: 100%;
+  }
+  
+  .conteudo-footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+  
+  .secao-footer {
+    flex: 1;
+    
+    text-align: left;
+  }
+  
+  .links ul {
+    list-style: none;
+    margin-left: 100px;
+    line-height: 2.0;
+  }
+  
+  .links a {
+    text-decoration: none;
+    color: white;
+    font-family: "Fonte texto";
+  }
+  
+  .links li {
+    margin: 10px 0;
+  }
+  
+  /* EFEITOS DE HOVER */
+  
+  .links a:hover {
+    color:#FF6F00;
+  transition: color 0.5s ease;
+  }
+  
+  /* FIM!!!! */
+  
+  .newsletter h3,
+  .contato h3 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .newsletter p,
+  .contato p {
+    margin: 5px 0px;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  
+  
+  
+  .contato {
+    padding-right: 80px;
+  }
+  
+  .newsletter {
+    padding-left: 80px;
+  }
+  
+  
+  .newsletter form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .newsletter input[type="email"] {
+    padding: 10px 15px;
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    width: 100%;
+    max-width: 320px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-family: "Fonte texto";
+    text-align: left;
+  }
+  
+  input::placeholder {
+    color: white;
+  }
+  
+  .newsletter button {
+    padding: 7px 20px;
+    color: white;
+    border-radius: 15px;
+    width: 120px;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid white;
+    font-family: "Fonte titulo";
+  }
+  
+  /* EFEITOS DE HOVER */
+  
+  .newsletter button:hover {
+    background-color: white;
+    color:#0B1956;
+  transition: color 0.5s ease;
+  transition: background 0.5s ease;
+  }
+  
+  /* FIM!!!! */
+  
+  
+  .secao-footer-contato{
+    color: white;
+    text-align: left;
+    line-height: 2.5;
+    margin-right: 80px;
+    margin-left: 50px;
+   }
+  
+   .secao-footer-contato h4 {
+    font-family: "Fonte titulo2";
+    margin-left: 20px;
+  }
+  
+   .secao-footer-contato p img {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 10px;
+  }
+  
+  .secao-footer-contato p {
+    font-family: "Fonte texto";
+    margin-left: 20px;
+  }
+  
+  
+  .divisoria {
+    width: 1px;
+    background: url('Line\ 6.png') no-repeat center center;
+    background-size: cover;
+    height: 230px;
+    margin-top: 10px;
+    margin-left: 120px;
+  }
+  
+  .divisoria1 {
+    width: 1px;
+    background: url('Line\ 6.png') no-repeat center center;
+    background-size: cover;
+    height: 230px;
+    margin-top: 10px;
+    margin-left: 0px;
+  }
+  
+  .barra-escura-footer {
+    background-color: #081446;
+    height: 60px;
+    width: 100%;
+  }
