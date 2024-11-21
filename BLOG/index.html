@@ -9,6 +9,7 @@
 <body>
 
     
+
     <header>
         <div class="container">
             <img class="logo" src="Imagens/logo.png" alt="">
@@ -18,12 +19,29 @@
                 <a id="navegacao" href="#">Jogos</a>
                 <a id="navegacao" href="http://localhost:3000/adicionar">Login</a>
                 
-               <a href=""><img class="icone" src="Icones/menu.png" alt="Menu"></a>
+                <nav role="navigation">
+                  <!-- container do menu -->
+                  <div id="menuAlternar"> 
+                      <input type="checkbox" id="menuCheckbox" onclick="document.body.classList.toggle('menu-aberto');" />
+              
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      <!-- itens do menu-->
+                      <ul id="menu">
+                          <li><a href="#">Início</a></li>
+                          <li><a href="#">Sobre</a></li>
+                          <li><a href="#">Informações</a></li>
+                          <li><a href="#">Contato</a></li>
+                          <li><a href="#" >Saiba Mais</a></li>
+                      </ul>
+                  </div>
+              </nav>
             </nav>
         </div>
     </header>
 
-    
+    <main id="conteudoPrincipal"> 
     <section id="principal">
         <div>
             <h1>Encontre as matérias <br>
@@ -211,6 +229,6 @@
 
         
       
-
+</main>
 </body>
 </html>

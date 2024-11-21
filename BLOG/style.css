@@ -762,3 +762,149 @@ header nav a {
     width: 100%;
   }
   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* TESTE MENU!!!!!!!!!!!!!! */
+
+  body {
+    margin: 0; 
+    padding: 0; 
+    background: #ffffff; 
+    color: black;
+}
+
+main {
+    max-width: 100%;
+    
+    transition: filter 0.3s ease-in-out; /*  transição */
+}
+
+p {
+    font-size: 18px; 
+}
+
+
+
+/* botão do menu */
+#menuAlternar {
+    position: fixed; 
+    top: 40px; /*  topo */
+    right: 20px; 
+    z-index: 200; /* botão por cima d menu */
+}
+
+#menuAlternar a {
+    text-decoration: none; 
+    color: #ffffff; 
+    transition: color 0.3s ease; 
+}
+
+#menuAlternar a:hover {
+    color: tomato; 
+}
+
+#menuAlternar input {
+    display: block; 
+    position: absolute; 
+    cursor: pointer; 
+    width: 80px;
+    height: 80px;
+    opacity: 0; 
+}
+
+#menuAlternar span {
+    display: block; 
+    width: 33px; /* largura do capa capudo */
+    height: 4px; /* altura do capa capudo */
+    margin-bottom: 5px; 
+    position: relative; 
+    background: #000000; /* cor do capa capudo*/
+    border-radius: 3px; 
+    z-index: 1; /* fica por cima do checklist */
+    transform-origin: 4px 0px; /* onde roda*/
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+                background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+                opacity 0.55s ease; /*Todas as transições */
+}
+
+#menuAlternar span:first-child {
+    transform-origin: 0% 0%; /* de onde sai a 1°lunha */
+}
+
+#menuAlternar span:nth-last-child(2) {
+    transform-origin: 0% 100%; /* de onde sai a 2°lunha */
+}
+
+#menuAlternar input:checked ~ span {
+    opacity: 1; 
+    transform: rotate(45deg) translate(-2px, -1px); /* muda o icone pra X */
+    position: relative;
+}
+
+#menuAlternar input:checked ~ span:nth-last-child(3) {
+    opacity: 0; 
+    transform: rotate(0deg) scale(0.2, 0.2); 
+}
+
+#menuAlternar input:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px); 
+}
+
+/* Estilização do menu */
+#menu {
+    position: fixed; 
+    max-width: 300px; /* largura qnd abre*/
+    width: 80%; 
+    height: 100%; 
+    margin: 0; 
+    right: 0; 
+    padding: 50px; 
+    padding-top: 100px; 
+    box-sizing: border-box; 
+    background: #1a1a4c; /* cor do fundo */
+    list-style-type: none; 
+    transform: translateX(100%); /* deixa ano que vem */
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0); /* animacao qnd abre*/
+    color: #ffffff; /* cor do texto */
+    z-index: 100; /* deixa o menu acima de tudo */
+}
+
+#menu li {
+    padding: 10px 0; /* espaço entre iten */
+    font-size: 22px; 
+}
+
+#menu li label {
+    cursor: pointer; 
+}
+
+#menuAlternar input:checked ~ ul {
+    transform: translateX(0); /* ativa o menu */
+}
+
+
+body.menu-aberto main  {
+    filter: blur(5px); /* blur no site td */
+}
+
+body.menu-aberto #navegacao {
+  filter: blur(5px); /* blur no site td */
+}
+
+
+body:not(.menu-aberto) #menu {
+    transform: translateX(100%); /* deixa o menu fora da tela */
+}
