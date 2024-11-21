@@ -159,6 +159,7 @@ header nav a {
 .secao-pdf h2 {
     font-size: 32px;
     margin-bottom: 20px;
+    font-family: "Fonte titulo2";
 }
 
 .secao-pdf p {
@@ -175,6 +176,7 @@ header nav a {
     border-radius: 25px;
     text-decoration: none;
     font-weight: bold;
+    font-family: "Fonte titulo";
     
 }
 
