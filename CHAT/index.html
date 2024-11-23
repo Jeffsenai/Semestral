@@ -1,18 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chat Estilo WhatsApp</title>
+  <title>Chat</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <button id="open-chat-btn" class="open-chat-btn">Abrir Chat</button>
-  <div class="chat-container hidden">
-    <div id="chat-window" class="chat-window"></div>
-    <div class="input-area">
-      <input type="text" id="user-input" placeholder="Digite sua mensagem...">
-      <button id="send-btn">Enviar</button>
+  <button id="abrir-chat-btn" class="abrir-chat-btn"><img src="Imagens/chat.png" alt=""></button>
+  <div class="container-chat escondido">
+    <div class="header-chat">
+      <span class="titulo-chat">Chat Librali</span>
+      <button id="fechar-chat-btn" class="fechar-chat-btn"><img src="Imagens/X.png" alt="Fechar"></button>
+    </div>
+    <div id="janela-chat" class="janela-chat"></div>
+    <div class="area-input">
+      <input type="text" id="entrada-usuario" placeholder="Digite sua mensagem...">
+      <button id="enviar-btn"><img class="setinha" src="Imagens/seta.png" alt=""></button>
     </div>
   </div>
   <script src="SCRIPT.JS"></script>
